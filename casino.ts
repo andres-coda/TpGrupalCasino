@@ -1,30 +1,54 @@
-export class Casino {
-    private nombre : string;
-    private fichasEntrada : number;
-    private premio : number;
+import { Dados } from "./dados";
+import { Apuesta } from "./apuesta";
 
-    public constructor (pNombre:string,pFichas:number,pPremio:number){
-        this.nombre = pNombre;
-        this.fichasEntrada = pFichas;
-        this.premio = pPremio;
+export class Casino {
+    private nombre: string;
+    private ciudad: string;
+    private direccion: string;
+    private juegoDados:Dados;
+
+    constructor(nombre: string, ciudad: string, direccion: string, juegoDados:Dados) {
+        this.nombre = nombre;
+        this.ciudad = ciudad;
+        this.direccion = direccion;
+        this.juegoDados = juegoDados;
+        
     }
 
-public setNombre(pNombre:string):void{
-        this.nombre = pNombre;
-}
-public getNombre():string{
+    public getNombre(): string {
         return this.nombre;
+    }
+
+    public setNombre(nombre: string) {
+        this.nombre = nombre;
+    }
+
+    public getCiudad(): string {
+        return this.ciudad;
+    }
+
+    public setCiudad(ciudad: string) {
+        this.ciudad = ciudad;
+    }
+
+    public getDireccion(): string {
+        return this.direccion;
+    }
+
+    public setDireccion(direccion: string) {
+        this.direccion = direccion;
+    }
+
+
+    
 }
-public setEntrada(pFichas:number):void{
-        this.fichasEntrada = pFichas;
-}
-public getEntrada():number{
-        return this.fichasEntrada
-}
-public setPremio(pPremio:number):void{
-    this.premio = pPremio;
-}
-public getPremio():number{
-    return this.premio;
-}
-} 
+
+
+
+
+
+
+
+
+
+
